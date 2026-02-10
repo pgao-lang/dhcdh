@@ -71,6 +71,14 @@
       animation: bob 1.5s ease-in-out infinite;
     }
 
+    #flower {
+      left: 50%;
+      bottom: 15%;
+      height: 30%;
+      transform: translateX(-50%);
+      z-index: 1;
+    }
+
     #door {
       right: 10%;
       bottom: 5%;
@@ -170,6 +178,7 @@
     <img id="background" src="assets/inside-scene2.jpg" alt="Background">
     <img id="diatom-guy" class="sprite" src="assets/diatom-guy.png" alt="Diatom Guy">
     <img id="hat" class="sprite" src="assets/hat.png" alt="Hat">
+    <img id="flower" class="sprite" src="assets/diatom2.png" alt="Flower">
     <img id="diatom-guy-with-hat" class="sprite" src="assets/diatom-guy-with-hat.png" alt="Diatom Guy with Hat">
     <img id="door" class="sprite" src="assets/door.png" alt="Door">
 
@@ -184,6 +193,7 @@
   <script>
     const elements = {
       background: document.getElementById('background'),
+      flower: document.getElementById('flower'),
       diatomGuy: document.getElementById('diatom-guy'),
       hat: document.getElementById('hat'),
       diatomGuyWithHat: document.getElementById('diatom-guy-with-hat'),
@@ -323,6 +333,7 @@
       elements.background.style.display = 'none';
       elements.diatomGuyWithHat.style.display = 'none';
       elements.door.style.display = 'none';
+      elements.flower.style.display = 'none';
 
       // Show Scene 2
       elements.scene2Bg.style.display = 'block';
